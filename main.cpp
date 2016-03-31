@@ -1,4 +1,4 @@
-#include <QCoreApplication>
+
 #include <iostream>
 #include <math.h>
 #include <ctime>
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     double intptr;
 
     for (int a = 1; a < n; a++) {
-        for (int b = 1; b < n; b++) {
+        for (int b = a+1; b < n; b++) {
 
             if ( !( (a % 2 == 1) && (b % 2 == 1) ) ) {
                 double z = sqrt((a*a)+(b*b));
@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
                     counter++;
                 }
             }
+
         }
     }
 
@@ -33,7 +34,7 @@ int main(int argc, char *argv[])
     cout<<(search_time/CLOCKS_PER_SEC)<<endl;
     ////////////////////////////// время //////////////////////////////
 
-
+    counter*=2;
     cout << counter;
     return 0;
 }
@@ -59,4 +60,3 @@ int main(int argc, char *argv[])
 
 //    }
 //}
-
